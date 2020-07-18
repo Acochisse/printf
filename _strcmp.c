@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * _strcmp - compares strings
@@ -12,6 +13,7 @@ int _strcmp(const char *s1, char *s2)
 
 {
 	int i;
+
 
 	for (i = 0; s1[i] != '\0'; i++)
 	{

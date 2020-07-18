@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
+
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -11,9 +12,16 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{NULL, NULL}
 	};
+
 	if (!format || !_strcmp(format, "%"))
+
 	{
-		return (99);
+		printf("Format: %s\n", format);
+	}
+
+	if (!strcmp(format, "%"))
+	{
+		printf("strcmp: %s\n", format);
 	}
 
 	va_start(ap, format);
@@ -21,7 +29,9 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i]; i++, count++)
 	{
 		if (format[i] != '%')
+		{
 			_putchar(format[i]);
+		}
 		else
 		{
 			for (j = 0; conv_spec[j].s_char; j++)
@@ -30,7 +40,7 @@ int _printf(const char *format, ...)
 				{
 					count += conv_spec[j].func(ap);
 					i++;
-					break;
+					 break;
 				}
 
 			}
