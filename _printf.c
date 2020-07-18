@@ -6,6 +6,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
+	int i, j, count = 0;
 	get_f conv_spec[] = {
 		{"c", print_char},
 		{NULL, NULL}
@@ -18,8 +19,25 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	/* stuff goes here. */
+	for (i = 0; format[i]; i++, count++)
+	{
+		if (format[i] != '%')
+			_putchar(format[i]);
+		else
+		{
+			for (j = 0; conv_spec[j].s_char; j++)
+			{
+				if (format[i + 1] == conv_spec[j].s_char)
+				{
+					count += conv_spec[j].func(ap);
+					i++;
+					break;
+				}
+
+			}
+		}
+	}
 
 	va_end(ap);
-	return (0);
+	return (count);
 }
