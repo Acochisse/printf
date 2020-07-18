@@ -1,17 +1,16 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
 
+#include <stdarg.h>
+typedef struct get_format
+{
+	char s_char;
+	int (*func)(va_list ap);
+} get_f;
+
 int _putchar(char c);
+int print_char(va_list ap);
+int _printf(const char *format, ...);
+int _strcmp(const char *s1, char *s2);
 
-
-op_printf ops[] = {
-	{"c", op_char},
-	{"s", op_string}
-	{"%", op_modulo}
-	{"d", op_digit}
-	{"i", op_int}
-	{"\n", op_new_line}
-	{NULL, NULL}
-};
-
-#endif
+#endif /* _HOLBERTON_H_ */
