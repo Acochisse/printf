@@ -7,7 +7,7 @@
 typedef struct get_format
 {
 	char *s_char;
-	void (*func)(va_list ap);
+	int (*func)(va_list ap);
 } get_f;
 
 int _putchar(char c);
