@@ -7,7 +7,7 @@
  * Return: int that tells num spaces in between
  */
 
-int _strcmp(char *s1, char *s2)
+int _strcmp(const char *s1, char *s2)
 {
 	int i = 0;
 
