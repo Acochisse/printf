@@ -1,11 +1,13 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
-
+#include <stdlib.h>
+#include <stdio.h>
 #include <stdarg.h>
+
 typedef struct get_format
 {
-	char s_char;
-	int (*func)(va_list ap);
+	char *s_char;
+	void (*func)(va_list ap);
 } get_f;
 
 int _putchar(char c);
