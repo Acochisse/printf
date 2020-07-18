@@ -1,0 +1,31 @@
+.TH _printf 3 "Jul 18, 2020" "Version 1.0" "man: _printf"
+
+.SH NAME
+_printf - Formats data for printing to output.
+
+.SH SYNOPSIS
+int
+_printf(const char *format, ...)
+
+.SH DESCRIPTION
+_printf is a function that formats and prints data based on type of argument.
+Format specifiers start with a percent character ("%") followed by the format
+character.
+
+.SH FORMAT
+Format characters:
+.PP
+.IP %c
+Print character.
+.IP %s
+Print string.
+.IP %%
+No argument is being used, so print '%'
+.IP %d,%i
+Print digit or integer.
+
+.SH SEE ALSO
+printf(3)
+
+.SH AUTHOR
+Blake Stewart, Scott Seufert
