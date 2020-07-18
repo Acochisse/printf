@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
-	if (!format)
+	if (!format || !_strcmp(format, "%"))
+
 	{
 		printf("Format: %s\n", format);
 	}
