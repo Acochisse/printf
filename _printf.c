@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
-
+#include <string.h>
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -11,7 +11,6 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{NULL, NULL}
 	};
-
 	if (!format || !_strcmp(format, "%"))
 	{
 		return (99);
@@ -27,7 +26,7 @@ int _printf(const char *format, ...)
 		{
 			for (j = 0; conv_spec[j].s_char; j++)
 			{
-				if (format[i + 1] == conv_spec[j].s_char)
+				if (format[i + 1] == *(conv_spec[j].s_char))
 				{
 					count += conv_spec[j].func(ap);
 					i++;
