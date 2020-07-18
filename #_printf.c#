@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
-#include <string.h>
+
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{NULL, NULL}
 	};
+
 	if (!format || !_strcmp(format, "%"))
 	{
 		return (99);
@@ -38,5 +39,6 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(ap);
-	return (count);
+	printf("%c\n", count);
+z	return (count);
 }
