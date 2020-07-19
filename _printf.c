@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int i, j, count = 0;
 	get_f conv_spec[] = {
-		{"c", print_char},
+		{"c", print_char}, {"%", print_modulo},
 		{NULL, NULL}
 	};
 
