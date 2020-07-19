@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int i, j, count = 0;
 	get_f conv_spec[] = {
 		{"c", print_char}, {"%", print_modulo},
-		{NULL, NULL}
+		{"s", print_string}, {NULL, NULL}
 	};
 
 	if (!format || !_strcmp(format, "%"))
