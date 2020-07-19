@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char c = 'b';
+	char c = '%';
 
 	_printf("%c\n", c);
 	return (0);

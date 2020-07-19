@@ -12,6 +12,7 @@ typedef struct get_format
 
 int _putchar(char c);
 int print_char(va_list ap);
+int print_modulo(va_list ap);
 int _printf(const char *format, ...);
 int _strcmp(const char *s1, char *s2);
 
