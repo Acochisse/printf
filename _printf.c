@@ -17,7 +17,9 @@ int _printf(const char *format, ...)
 	get_f conv_spec[] = {
 		{"c", print_char}, {"%", print_modulo},
 		{"s", print_string}, {"d", print_digit},
-		{"i", print_digit}, {NULL, NULL}
+		{"i", print_digit}, {"o", print_octal},
+		{"X", print_hex},
+		{"u", print_unsigned}, {NULL, NULL}
 	};
 
 	if (!format || !_strcmp(format, "%"))
