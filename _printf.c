@@ -4,6 +4,12 @@
 #include <stdio.h>
 #include <string.h>
 
+/**
+ * _printf - Our custom printf
+ * @format: input
+ * Return: output
+ */
+
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -16,12 +22,7 @@ int _printf(const char *format, ...)
 	if (!format || !_strcmp(format, "%"))
 
 	{
-		printf("Format: %s\n", format);
-	}
-
-	if (!strcmp(format, "%"))
-	{
-		printf("strcmp: %s\n", format);
+		return(99);
 	}
 
 	va_start(ap, format);
