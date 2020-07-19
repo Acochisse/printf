@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	char c = '%';
+	char *str = "Hello, World!";
 
-	_printf("%c\n", c);
+	_printf("%s\n", str);
 	return (0);
 }
