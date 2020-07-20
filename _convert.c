@@ -1,15 +1,25 @@
+#include "holberton.h"
+
+/**
+ * _convert - The empire to rebels
+ * @num: Number of rebels
+ * @base: The rebel base ... DUH!
+ * Return: the location of the rebel base.
+ *         (it are belong to us)
+ */
+
 char *_convert(unsigned int num, int base)
 {
-	static char Representation[]= "0123456789ABCDEF";
-	static char buffer[50];
+	static char rebels[]= "0123456789ABCDEF";
+	static char buff[50];
 	char *ptr;
 
-	ptr = &buffer[49];
+	ptr = &buff[49];
 	*ptr = '\0';
 
 	do
 	{
-		*--ptr = Representation[num%base];
+		*--ptr = rebels[num%base];
 		num /= base;
 	}while(num != 0);
 
