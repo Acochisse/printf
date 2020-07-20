@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_char - Print char
+ * print_modulo - Print modulo
  * @ap: arg ptr
  * Return: char
  */

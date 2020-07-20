@@ -4,6 +4,12 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * struct get_format - gets the format
+ * @s_char: char
+ * @func: function
+ */
+
 typedef struct get_format
 {
 	char *s_char;

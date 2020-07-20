@@ -10,18 +10,17 @@
 
 char *_convert(unsigned int num, int base)
 {
-	static char rebels[]= "0123456789ABCDEF";
+	static const char rebels[] = "0123456789ABCDEF";
 	static char buff[50];
 	char *ptr;
 
 	ptr = &buff[49];
 	*ptr = '\0';
 
-	do
-	{
-		*--ptr = rebels[num%base];
+	do {
+		*--ptr = rebels[num % base];
 		num /= base;
-	}while(num != 0);
+	} while (num != 0);
 
-	return(ptr);
+	return (ptr);
 }
