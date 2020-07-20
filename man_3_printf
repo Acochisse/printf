@@ -10,7 +10,7 @@ _printf(const char *format, ...)
 .SH DESCRIPTION
 _printf is a function that formats and prints data based on type of argument.
 Format specifiers start with a percent character ("%") followed by the format
-character.
+character. For example: "%c" to print a single character.
 
 .SH FORMAT
 Format characters:
@@ -20,10 +20,15 @@ Print character.
 .IP %s
 Print string.
 .IP %%
-No argument is being used, so print '%'
+Print modulo ('%')
 .IP %d,%i
 Print digit or integer.
-
+.IP %u
+Print unsigned
+.IP %o
+Print octal
+.IP %x,%X
+Print hex in lower or uppercase respectively.
 .SH SEE ALSO
 printf(3)
 
