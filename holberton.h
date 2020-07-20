@@ -25,5 +25,6 @@ int print_unsigned(va_list ap);
 int _printf(const char *format, ...);
 int _strcmp(const char *s1, char *s2);
 int _strlen(char *s);
+int print_reverse(va_list ap);
 
 #endif /* _HOLBERTON_H_ */

@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 		{"c", print_char}, {"%", print_modulo},
 		{"s", print_string}, {"d", print_digit},
 		{"i", print_digit}, {"o", print_octal},
-		{"X", print_hex},
+		{"X", print_hex}, {"r", print_reverse},
 		{"u", print_unsigned}, {NULL, NULL}
 	};
 
