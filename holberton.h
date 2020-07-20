@@ -18,7 +18,6 @@ int _putchar(char c);
 void _puts(char *);
 char *_convert(unsigned int num, int base);
 char *_convertlower(unsigned int num, int base);
-char *string_tolower(char *c);
 int print_char(va_list ap);
 int print_modulo(va_list ap);
 int print_string(va_list ap);
