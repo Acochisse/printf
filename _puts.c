@@ -1,10 +1,12 @@
 #include "holberton.h"
+
 /**
  * _puts - prints a pointer string
  * @str: input string
  *
  * Return: nothing
  */
+
 void _puts(char *str)
 {
 	int i;
