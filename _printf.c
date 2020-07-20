@@ -1,8 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdarg.h>
-#include <stdio.h>
-#include <string.h>
 
 /**
  * _printf - Our custom printf
@@ -18,11 +16,11 @@ int _printf(const char *format, ...)
 		{"c", print_char}, {"%", print_modulo}, {"s", print_string},
 		{"d", print_digit}, {"i", print_digit}, {"o", print_octal},
 		{"X", print_hex}, {"r", print_reverse},	{"u", print_unsigned},
-		{"x", print_lhex}, {NULL, NULL}
+		{"x", print_lhex}, {'\0', NULL}
 	};
 
 	if (!format || !_strcmp(format, "%"))
-		return (99);
+		return (-1);
 
 	va_start(ap, format);
 
