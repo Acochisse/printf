@@ -23,19 +23,14 @@ int _printf(const char *format, ...)
 	};
 
 	if (!format || !_strcmp(format, "%"))
-
-	{
-		return(99);
-	}
+		return (99);
 
 	va_start(ap, format);
 
 	for (i = 0; format[i]; i++, count++)
 	{
 		if (format[i] != '%')
-		{
 			_putchar(format[i]);
-		}
 		else
 		{
 			for (j = 0; conv_spec[j].s_char; j++)
@@ -44,7 +39,7 @@ int _printf(const char *format, ...)
 				{
 					count += conv_spec[j].func(ap);
 					i++;
-					 break;
+					break;
 				}
 
 			}
