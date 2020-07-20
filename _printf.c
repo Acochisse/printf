@@ -15,11 +15,10 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int i, j, count = 0;
 	get_f conv_spec[] = {
-		{"c", print_char}, {"%", print_modulo},
-		{"s", print_string}, {"d", print_digit},
-		{"i", print_digit}, {"o", print_octal},
-		{"X", print_hex}, {"r", print_reverse},
-		{"u", print_unsigned}, {NULL, NULL}
+		{"c", print_char}, {"%", print_modulo}, {"s", print_string},
+		{"d", print_digit}, {"i", print_digit}, {"o", print_octal},
+		{"X", print_hex}, {"r", print_reverse},	{"u", print_unsigned},
+		{"x", print_lhex}, {NULL, NULL}
 	};
 
 	if (!format || !_strcmp(format, "%"))
