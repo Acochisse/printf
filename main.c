@@ -7,8 +7,6 @@
  */
 int main(void)
 {
-	int a = 103 * (10 / 5);
-
-	_printf("%u\n", a);
+	_printf("%r\n", "Hello, World!");
 	return (0);
 }
