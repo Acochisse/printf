@@ -21,5 +21,5 @@ int print_digit(va_list ap)
 	else
 		u = i;
 	_puts(_convert(u, 10));
-	return (0);
+	return (i);
 }
