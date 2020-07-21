@@ -10,9 +10,8 @@
 int print_digit(va_list ap)
 
 {
-	int i, div;
 	int n = va_arg(ap, int);
-	int num = n, j, k, neg = 0;
+	int i, j, k, div, neg = 0, num = n;
 
 	if (n == 0)
 	{
@@ -20,9 +19,7 @@ int print_digit(va_list ap)
 		return (0);
 	}
 	for (i = 1; (num / 10) != 0; i++)
-	{
 		num /= 10;
-	}
 	for (j = (i - 1); j >= 0; j--)
 	{
 		div = 1;
