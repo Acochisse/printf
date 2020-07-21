@@ -42,5 +42,6 @@ int print_digit(va_list ap)
 			n %= div;
 		}
 	}
+
 	return (i - 1 + neg);
 }

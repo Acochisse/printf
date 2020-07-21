@@ -12,5 +12,5 @@ int print_lhex(va_list ap)
 	unsigned int i = va_arg(ap, unsigned int);
 
 	_puts(_convertlower(i, 16));
-	return (0);
+	return (i);
 }
