@@ -11,12 +11,15 @@ int print_digit(va_list ap)
 
 {
 	int i = va_arg(ap, int);
-
+	unsigned int u;
 	if (i < 0)
 	{
-		i = -i;
+		u = -i;
 		_putchar('-');
+
 	}
-	_puts(_convert(i, 10));
+	else
+		u = i;
+	_puts(_convert(u, 10));
 	return (0);
 }
