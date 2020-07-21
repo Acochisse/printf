@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 		{"c", print_char}, {"%", print_modulo}, {"s", print_string},
 		{"d", print_digit}, {"i", print_digit}, {"o", print_octal},
 		{"X", print_hex}, {"r", print_reverse},	{"u", print_unsigned},
-		{"x", print_lhex}, {"\0", NULL}
+		{"x", print_lhex}, {"R", print_rot13}, {"\0", NULL}
 	};
 
 	if (!format || !_strcmp(format, "%"))

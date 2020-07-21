@@ -35,7 +35,8 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("%d %d\n", 12345, (-98878 / 12));
     printf("%d %d\n", 12345, (-98878 / 12));
-
+    _printf("%r\n", "Hello, World !!");
+    _printf("%R\n", "Hello, World !!");
 
     return (0);
 }
