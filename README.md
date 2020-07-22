@@ -16,3 +16,10 @@ Created by Scott Seufert & Blake Stewart 18 Jul 2020
 | print_rot13.c |
 | _putchar.c |
 | _strcmp.c |
+| holberton.h |
+| print_char.c |
+| print_hex.c |
+| print_octal.c |
+| print_string.c |
+| _puts.c |
+| _strlen.c |
