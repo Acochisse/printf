@@ -16,19 +16,24 @@ character. For example: "%c" to print a single character.
 Format characters:
 .PP
 .IP %c
-Print character.
+Print a character.
 .IP %s
-Print string.
+Print a string.
 .IP %%
 Print modulo ('%')
 .IP %d,%i
 Print digit or integer.
 .IP %u
-Print unsigned
+Print unsigned integer.
 .IP %o
-Print octal
+Print in octal notation.
+.IP %r
+Print string in reverse.
+.IP %R
+Print rot13 encrypted string.
 .IP %x,%X
 Print hex in lower or uppercase respectively.
+
 .SH SEE ALSO
 printf(3)
 
