@@ -24,5 +24,5 @@ int print_reverse(va_list ap)
 	{
 		_putchar(str[i]);
 	}
-	return (len - 1);
+	return (len - 2);
 }
