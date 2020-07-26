@@ -10,26 +10,27 @@ int print_lhex(va_list ap)
 
 {
 	unsigned int n = va_arg(ap, int);
-	int i, j, k, div, num = n;
+	int i;
+	unsigned int num = n;
+	static const char rebels[] = "0123456789abcdef";
+	static char buff[50];
+	char *ptr;
+
+	ptr = &buff[49];
+	*ptr = '\0';
+
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return (0);
 	}
-	for (i = 1; (num / 16) != 0; i++)
+	do {
+		*--ptr = rebels[num % 16];
 		num /= 16;
-	for (j = (i - 1); j >= 0; j--)
-	{
-		div = 1;
-		for (k = 0; k < j; k++)
-			div *= 16;
-		if (n)
-		{
-			_putchar((n / 16) + '0');
-			n %= 16;
-		}
-	}
+	} while (num != 0);
 
+	for (i = 0; ptr[i] != 0; i++)
+		_putchar(ptr[i]);
 	return (i - 1);
 }
